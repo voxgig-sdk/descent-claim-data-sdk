@@ -1,0 +1,26 @@
+{
+  point: "warning"
+  note: "Points POST /mcp/tools/enquiry_describe, POST /mcp/tools/enquiry_fields and POST /mcp/tools/submit_enquiry on entity=enquiry op=create have the same selector (exist: none), so only POST /mcp/tools/enquiry_describe is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "enquiry"
+  op: "create"
+  points: [
+    "POST /mcp/tools/enquiry_describe"
+    "POST /mcp/tools/enquiry_fields"
+    "POST /mcp/tools/submit_enquiry"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points POST /mcp/tools/checker_answer, POST /mcp/tools/checker_start and POST /mcp/tools/checker_tree on entity=guide op=create have the same selector (exist: none), so only POST /mcp/tools/checker_answer is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "guide"
+  op: "create"
+  points: [
+    "POST /mcp/tools/checker_answer"
+    "POST /mcp/tools/checker_start"
+    "POST /mcp/tools/checker_tree"
+  ]
+
+}

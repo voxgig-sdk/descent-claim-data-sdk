@@ -1,0 +1,18 @@
+# BasicGuideFlow
+
+main: kit: flow: BasicGuideFlow:
+{
+  entity: "guide",
+  kind: "basic",
+  name: "BasicGuideFlow",
+  step: [
+    {
+      i: {
+        ref: "guide_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicGuideFlow"
+}

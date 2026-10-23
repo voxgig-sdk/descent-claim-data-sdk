@@ -1,0 +1,45 @@
+{
+  "existing": {
+    "mcp": {
+      "MCP00": {
+        "id": "MCP00",
+        "jsonrpc": "s29",
+        "method": "s2a",
+        "params": {}
+      },
+      "MCP01": {
+        "id": "MCP01",
+        "jsonrpc": "s51",
+        "method": "s52",
+        "params": {}
+      },
+      "MCP02": {
+        "id": "MCP02",
+        "jsonrpc": "s79",
+        "method": "s7a",
+        "params": {}
+      }
+    }
+  },
+  "new": {
+    "mcp": {
+      "mcp_ref01": {
+        "jsonrpc": "sa1",
+        "method": "sa2",
+        "params": {}
+      }
+    }
+  },
+  "requests": {
+    "POST /mcp": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /mcp": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

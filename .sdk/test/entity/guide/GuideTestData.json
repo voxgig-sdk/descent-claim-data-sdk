@@ -1,0 +1,46 @@
+{
+  "existing": {
+    "guide": {
+      "GUIDE00": {
+        "choice": 20,
+        "question": "s15",
+        "id": "GUIDE00"
+      },
+      "GUIDE01": {
+        "choice": 40,
+        "question": "s29",
+        "id": "GUIDE01"
+      },
+      "GUIDE02": {
+        "choice": 60,
+        "question": "s3d",
+        "id": "GUIDE02"
+      }
+    }
+  },
+  "new": {
+    "guide": {
+      "guide_ref01": {
+        "choice": 80,
+        "question": "s51"
+      }
+    }
+  },
+  "requests": {
+    "POST /mcp/tools/checker_answer": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /mcp/tools/checker_start": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /mcp/tools/checker_tree": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

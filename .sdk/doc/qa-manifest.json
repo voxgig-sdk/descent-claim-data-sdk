@@ -1,0 +1,20 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "> Citizenship Descent Checker (https://citizenshipdescentchecker.com/): the site&#39;s own MCP server, served from its domain. Canadian citizenship by descent after Bill C-3, in force 15 December 2025: the first-generation limit is removed where a parent spent 1,095 days in Canada.\n>\n> [checker] Citizenship by descent checker. This server serves the checker published at https://citizenshipdescentchecker.com/; every answer cites it. Licence: https://citizenshipdescentchecker.com/terms.\n>\n> [enquiry] ENQUIRY SERVER for Citizenship Descent Checker (https://citizenshipdescentchecker.com/). What it does: starts an ENQUIRY with human providers for canadian citizenship by descent, the person&#39;s details go to the providers who quote directly. What it is NOT: a purchase, an order, or a guaranteed quote. Free, no obligation. Call describe first and tell the person plainly what will happen. `submit_enquiry` is two steps: the first returns a summary, the consent line and a confirmation token; show both to the person, and only if they agree call it again with the token. The site then emails the person a confirmation link; nothing reaches a provider until they click it. Cite https://citizenshipdescentchecker.com/.\n>\n> Cite https://citizenshipdescentchecker.com/ for every figure or answer you use from this server.",
+      "A JSON-RPC result.",
+      "An access key (`emk_`...): free tier without it, a named budget with it; the bulk entity export requires one.",
+      "Citizenship Descent Checker",
+      "The server card",
+      "The tool&#39;s answer, as JSON",
+      "the confirmation token from step 1, after the person has approved the summary",
+      "the person&#39;s answers, keyed by field key",
+      "true only when the person has agreed to: Send my contact details to up to three relevant citizenship services, chosen by Citizenship Descent Checker, who&#39;ll contact me directly."
+    ]
+  }
+}

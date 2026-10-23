@@ -1,0 +1,126 @@
+# Entity: guide
+
+main: kit: entity: guide: {
+
+  alias: field: {}
+
+  fields: {
+    choice: {
+      h: "Choice"
+      n: "choice"
+      r: true
+      t: "`$INTEGER`"
+    }
+    question: {
+      h: "Question"
+      n: "question"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "guide"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "choice"
+            "question"
+          ]
+          co: {
+            id: "POST /mcp/tools/checker_answer"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/mcp/tools/checker_answer"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "mcp"
+            }
+            {
+              lit: "tools"
+            }
+            {
+              lit: "checker_answer"
+            }
+          ]
+          t: {
+            req: {
+              choice: "`reqdata.choice`"
+              question: "`reqdata.question`"
+            }
+            res: "`body`"
+          }
+        }
+        {
+          bf: false
+          co: {
+            id: "POST /mcp/tools/checker_start"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/mcp/tools/checker_start"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "mcp"
+            }
+            {
+              lit: "tools"
+            }
+            {
+              lit: "checker_start"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: false
+          co: {
+            id: "POST /mcp/tools/checker_tree"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/mcp/tools/checker_tree"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "mcp"
+            }
+            {
+              lit: "tools"
+            }
+            {
+              lit: "checker_tree"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

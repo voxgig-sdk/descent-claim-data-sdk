@@ -1,0 +1,137 @@
+# Entity: enquiry
+
+main: kit: entity: enquiry: {
+
+  alias: field: {}
+
+  fields: {
+    answers: {
+      h: "Answers"
+      n: "answers"
+      r: true
+      sh: "the person's answers, keyed by field key"
+      t: "`$OBJECT`"
+    }
+    confirmation: {
+      h: "Confirmation"
+      n: "confirmation"
+      r: false
+      sh: "the confirmation token from step 1, after the person has approved the summary"
+      t: "`$STRING`"
+    }
+    consent: {
+      h: "Consent"
+      n: "consent"
+      r: true
+      sh: "true only when the person has agreed to: Send my contact details to up to three relevant citizenship services, chosen by Citizenship Descent Checker, who'll contact me directly."
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "enquiry"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: false
+          co: {
+            id: "POST /mcp/tools/enquiry_describe"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/mcp/tools/enquiry_describe"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "mcp"
+            }
+            {
+              lit: "tools"
+            }
+            {
+              lit: "enquiry_describe"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: false
+          co: {
+            id: "POST /mcp/tools/enquiry_fields"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/mcp/tools/enquiry_fields"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "mcp"
+            }
+            {
+              lit: "tools"
+            }
+            {
+              lit: "enquiry_fields"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "answers"
+            "confirmation"
+            "consent"
+          ]
+          co: {
+            id: "POST /mcp/tools/submit_enquiry"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/mcp/tools/submit_enquiry"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "mcp"
+            }
+            {
+              lit: "tools"
+            }
+            {
+              lit: "submit_enquiry"
+            }
+          ]
+          t: {
+            req: {
+              answers: "`reqdata.answer`"
+              confirmation: "`reqdata.confirmation`"
+              consent: "`reqdata.consent`"
+            }
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

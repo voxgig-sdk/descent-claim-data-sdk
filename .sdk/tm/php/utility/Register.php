@@ -1,0 +1,72 @@
+<?php
+declare(strict_types=1);
+
+// DescentClaimData SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+DescentClaimDataUtility::setRegistrar(function (DescentClaimDataUtility $u): void {
+    $u->clean = [DescentClaimDataClean::class, 'call'];
+    $u->clean_add = [DescentClaimDataClean::class, 'add'];
+    $u->clean_explain = [DescentClaimDataDone::class, 'clean_explain'];
+    $u->done = [DescentClaimDataDone::class, 'call'];
+    $u->make_error = [DescentClaimDataMakeError::class, 'call'];
+    $u->feature_add = [DescentClaimDataFeatureAdd::class, 'call'];
+    $u->feature_hook = [DescentClaimDataFeatureHook::class, 'call'];
+    $u->feature_init = [DescentClaimDataFeatureInit::class, 'call'];
+    $u->fetcher = [DescentClaimDataFetcher::class, 'call'];
+    $u->make_fetch_def = [DescentClaimDataMakeFetchDef::class, 'call'];
+    $u->make_context = [DescentClaimDataMakeContext::class, 'call'];
+    $u->make_options = [DescentClaimDataMakeOptions::class, 'call'];
+    $u->make_request = [DescentClaimDataMakeRequest::class, 'call'];
+    $u->make_response = [DescentClaimDataMakeResponse::class, 'call'];
+    $u->make_result = [DescentClaimDataMakeResult::class, 'call'];
+    $u->make_point = [DescentClaimDataMakePoint::class, 'call'];
+    $u->make_spec = [DescentClaimDataMakeSpec::class, 'call'];
+    $u->make_url = [DescentClaimDataMakeUrl::class, 'call'];
+    $u->param = [DescentClaimDataParam::class, 'call'];
+    $u->prepare_auth = [DescentClaimDataPrepareAuth::class, 'call'];
+    $u->prepare_body = [DescentClaimDataPrepareBody::class, 'call'];
+    $u->prepare_headers = [DescentClaimDataPrepareHeaders::class, 'call'];
+    $u->prepare_method = [DescentClaimDataPrepareMethod::class, 'call'];
+    $u->prepare_params = [DescentClaimDataPrepareParams::class, 'call'];
+    $u->prepare_path = [DescentClaimDataPreparePath::class, 'call'];
+    $u->prepare_query = [DescentClaimDataPrepareQuery::class, 'call'];
+    $u->graphql_body = [DescentClaimDataGraphql::class, 'body'];
+    $u->graphql_errors = [DescentClaimDataGraphql::class, 'errors'];
+    $u->result_basic = [DescentClaimDataResultBasic::class, 'call'];
+    $u->result_body = [DescentClaimDataResultBody::class, 'call'];
+    $u->result_headers = [DescentClaimDataResultHeaders::class, 'call'];
+    $u->transform_request = [DescentClaimDataTransformRequest::class, 'call'];
+    $u->transform_response = [DescentClaimDataTransformResponse::class, 'call'];
+});

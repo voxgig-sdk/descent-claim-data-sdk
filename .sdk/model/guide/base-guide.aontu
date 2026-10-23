@@ -1,0 +1,47 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 3
+  metrics: count: path: 7
+  metrics: count: method: 8
+
+  entity: enquiry: {
+    path: "/mcp/tools/enquiry_describe": {
+      op: create: method: *POST
+    }
+    path: "/mcp/tools/enquiry_fields": {
+      op: create: method: *POST
+    }
+    path: "/mcp/tools/submit_enquiry": {
+      op: create: method: *POST
+      op: create: transform: req: "answers": *("`reqdata.answer`")|top
+      op: create: transform: req: "confirmation": *("`reqdata.confirmation`")|top
+      op: create: transform: req: "consent": *("`reqdata.consent`")|top
+    }
+  }
+
+  entity: guide: {
+    path: "/mcp/tools/checker_answer": {
+      op: create: method: *POST
+      op: create: transform: req: "choice": *("`reqdata.choice`")|top
+      op: create: transform: req: "question": *("`reqdata.question`")|top
+    }
+    path: "/mcp/tools/checker_start": {
+      op: create: method: *POST
+    }
+    path: "/mcp/tools/checker_tree": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: mcp: {
+    path: "/mcp": {
+      op: create: method: *POST
+      op: load: method: *GET
+    }
+  }
+
+}

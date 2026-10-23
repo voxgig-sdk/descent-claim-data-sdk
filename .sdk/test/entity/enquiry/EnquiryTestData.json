@@ -1,0 +1,50 @@
+{
+  "existing": {
+    "enquiry": {
+      "ENQUIRY00": {
+        "answers": {},
+        "confirmation": "s1f",
+        "consent": true,
+        "id": "ENQUIRY00"
+      },
+      "ENQUIRY01": {
+        "answers": {},
+        "confirmation": "s3d",
+        "consent": true,
+        "id": "ENQUIRY01"
+      },
+      "ENQUIRY02": {
+        "answers": {},
+        "confirmation": "s5b",
+        "consent": true,
+        "id": "ENQUIRY02"
+      }
+    }
+  },
+  "new": {
+    "enquiry": {
+      "enquiry_ref01": {
+        "answers": {},
+        "confirmation": "s79",
+        "consent": true
+      }
+    }
+  },
+  "requests": {
+    "POST /mcp/tools/enquiry_describe": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /mcp/tools/enquiry_fields": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /mcp/tools/submit_enquiry": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

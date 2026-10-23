@@ -1,0 +1,18 @@
+# BasicEnquiryFlow
+
+main: kit: flow: BasicEnquiryFlow:
+{
+  entity: "enquiry",
+  kind: "basic",
+  name: "BasicEnquiryFlow",
+  step: [
+    {
+      i: {
+        ref: "enquiry_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicEnquiryFlow"
+}

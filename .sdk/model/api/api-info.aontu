@@ -1,0 +1,39 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        name: "Citizenship Descent Checker"
+        url: "https://citizenshipdescentchecker.com/"
+      }
+      description: `Citizenship Descent Checker (https://citizenshipdescentchecker.com/): the site's own MCP server, served from its domain. Canadian citizenship by descent after Bill C-3, in force 15 December 2025: the first-generation limit is removed where a parent spent 1,095 days in Canada.
+
+[checker] Citizenship by descent checker. This server serves the checker published at https://citizenshipdescentchecker.com/; every answer cites it. Licence: https://citizenshipdescentchecker.com/terms.
+
+[enquiry] ENQUIRY SERVER for Citizenship Descent Checker (https://citizenshipdescentchecker.com/). What it does: starts an ENQUIRY with human providers for canadian citizenship by descent — the person's details go to the providers who quote directly. What it is NOT: a purchase, an order, or a guaranteed quote. Free, no obligation. Call describe first and tell the person plainly what will happen. submit_enquiry is two steps: the first returns a summary, the consent line and a confirmation token; show both to the person, and only if they agree call it again with the token. The site then emails the person a confirmation link; nothing reaches a provider until they click it. Cite https://citizenshipdescentchecker.com/.
+
+Cite https://citizenshipdescentchecker.com/ for every figure or answer you use from this server.`
+      security: {
+        in: "header"
+        name: "Authorization"
+        prefix: "Bearer"
+        scheme: "accessKey"
+        type: "http"
+      }
+      servers: [
+        {
+          description: "Citizenship Descent Checker"
+          url: "https://citizenshipdescentchecker.com"
+        }
+      ]
+      summary: "Canadian citizenship by descent after Bill C-3, in force 15 December 2025: the first-generation limit is removed where a parent spent 1,095 days in Canada."
+      termsOfService: "https://citizenshipdescentchecker.com/terms"
+      title: "Citizenship Descent Checker API"
+      version: "1.0.0"
+      website: "https://citizenshipdescentchecker.com/mcp"
+    }
+  }
+}
+
